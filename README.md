@@ -2,8 +2,6 @@
 XML encoding="utf-16" convert into JSON format in PHP
 
 <?php
-
-
 function xmlToJsonConverter($reqString){
     $response = str_replace("utf-16", "utf-8", $reqString);
     $response = htmlspecialchars_decode($response, ENT_QUOTES);
@@ -23,6 +21,6 @@ $xmlString = '<?xml version="1.0" encoding="utf-16"?>
 
 $jsonArray = xmlToJsonConverter($xmlString);
 
- echo 'Name:- '.$jsonArray['Name'].'<br>Age:- '.$jsonArray['Age'] .'<br>Email:- '.$jsonArray['Email'] ;
+echo 'Name:- '.$jsonArray['Name'].'<br>Age:- '.$jsonArray['Age'] .'<br>Email:- '.$jsonArray['Email'] ;
 
 ?>
